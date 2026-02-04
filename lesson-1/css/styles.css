@@ -1,2 +1,59 @@
 @charset "UTF-8";
 
+/*Named selectors*
+--------------------------------------------------------*/
+h2{
+    color: red;
+    font-style: italic;
+    
+}
+/* ID selectors
+--------------------------------------------------------*/
+#project{
+    color: olive;
+}
+/* Class selectors
+--------------------------------------------------------*/
+.about{
+    background-color: rgb(255, 72, 0);
+}
+/*contextual/Descendent selectors
+--------------------------------------------------------*/
+section p{
+    color: darkred;
+}
+.subproject em{
+    color: blue;
+}
+/*grouped selectors
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*structrual pseudo-class selectors
+--------------------------------------------------------*/
+li:nth-child(3n-1){
+    background-color: lightgray;
+}
+li:nth-of-type(odd){
+    font-weight: bold;
+}
+article section:last-of-type{
+    background-color: lightblue;
+}
+/*pseudo selectors --------------------------------------------------------*/
+h1+ p::first-line{
+    text-transform: uppercase;
+}
