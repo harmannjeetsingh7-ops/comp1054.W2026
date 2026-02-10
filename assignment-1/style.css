@@ -1,17 +1,26 @@
 @charset "utf-8";
+/* latin-ext */
+@font-face {
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Bebas Neue Regular'), local('BebasNeue-Regular'), url(https://fonts.gstatic.com/s/bebasneue/v11/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format('woff2'), url(https://fonts.gstatic.com/s/bebasneue/v11/JTUSjIg1_i6t8kCHKm459Wlhyw.woff) format('woff');
+}
 html {
  /*box sizing------------------------*/
     box-sizing: border-box;
 }
-    *, * ::before, *::after {
+    *, *::before, *::after {
     box-sizing: inherit;
 }
 body {
     min-height: 100vh;
-    margin: 0;
+    margin: 20px;
     color: white;
     background: lightgrey url("images/lover.png") no-repeat center;
     background-size: cover;
+    background-attachment: fixed;
 
   /*header*/
 }
@@ -24,7 +33,6 @@ header {
 }
 
 header h1 {
-    font-family: 'Times New Roman', Times, serif;
     text-transform: uppercase;
     letter-spacing: 0.5em;
     font-size: 5rem;
@@ -38,7 +46,6 @@ header h1 {
 main {
 
     padding: 0 10%;
-    min-width: 700px;
 
 }
 
@@ -47,36 +54,28 @@ article {
   background-color: rgba(48, 41, 41, 0.392);
   padding: 1.25rem;
   margin: 1.25rem 0;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
   line-height: 2rem;
   border-radius: 12px;
-  min-width: 700px;
+  max-width: 700px;
 
 }
 
-/*h2 and h3*/
+/*h2 */
 h2 {
-    text-align: center;
+    text-align: left;
     text-transform: uppercase;
     display: block;
     width: 100%;
-    padding: 2px 8px 2px 8px;
+    padding: 8px 8px 8px 8px;
     letter-spacing: 2px;
+    color: rgba(255, 140, 1, 0.948);
 }
 
-h3 {
-  font-size: 1.8rem;
-  letter-spacing: 5px;
-  margin-top: 1.25rem;
-  line-height: 3rem;
-  color: bisque;
-}
 
 /*/paragraphs*/
 p {
   font-size: 1.25rem;
-  line-height: 1rem;
+  line-height: 1.6rem;
   color: white;
 
 }
