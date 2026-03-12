@@ -1,0 +1,61 @@
+html {
+    box-sizing: border-box;
+    -webkit-text-size-adjust: 100%;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+img,
+picture {
+    display: inline-block;
+    max-width:120%;
+}
+
+article,
+aside,
+footer,
+header,
+main,
+nav,
+section {
+    display:block;
+
+}
+
+abbr[title] {
+    text-decoration: none;
+    border-bottom: none;
+}
+
+q {
+    quotes: none;
+}
+
+q::before,
+q::after {
+    content: "";
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
