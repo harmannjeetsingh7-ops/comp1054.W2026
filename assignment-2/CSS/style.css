@@ -8,3 +8,76 @@ body {
     color: #2b2623;
     background: #ddd6ca;
 }
+/* top label */
+header {
+    margin-bottom: 1rem;
+}
+
+header h1 {
+    display: inline-block;
+    margin: 0;
+    padding-right: 0.7rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #d68437;
+    border-right: 1px solid #9a9a9a;
+}
+
+/* article layout */
+article {
+    column-count: 2;
+    column-gap: 2.2rem;
+    column-fill: balance;
+}
+
+/* make these span full width */
+article img,
+article h2:first-of-type,
+article > p:first-of-type {
+    column-span: left;
+}
+
+/* image */
+article img {
+    width: 100%;
+    margin-bottom: 1.3rem;
+}
+
+/* main title */
+article h2:first-of-type {
+    margin:0.8rem;
+    font-size: 2.5rem;
+    line-height: 0.95;
+    font-weight: 800;
+    color: #191817;
+    white-space: nowrap;
+
+}
+
+/* intro paragraph */
+article > p:first-of-type {
+    margin: 0 0 1.25rem;
+    font-size: 1.02rem;
+    line-height: 1.28;
+    text-align: center;
+    color: #000000;
+}
+
+article > p:first-of-type strong {
+    color: #d68437;
+    font-weight: 700;
+}
+
+/* interview question headings */
+article h2:not(:first-of-type) {
+    margin: 0 0 0.2rem;
+    font-size: 1rem;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #222;
+    break-after: avoid;
+}
+
