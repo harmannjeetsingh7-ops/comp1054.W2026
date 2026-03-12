@@ -1,10 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Libre+Baskerville:wght@400;700&display=swap');
+
+html {
+    font-size: 16px;
+}
 html {
     font-size: 16px;
 }
 
 body {
     margin: 0;
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: 'Libre Baskerville', Georgia, "Times New Roman", serif;
     color: #2b2623;
     background: #ddd6ca;
 }
@@ -43,7 +48,7 @@ article {
     column-fill: balance;
 }
 
-/* make these span full width */
+/*image*/
 article img,
 article h2:first-of-type,
 article > p:first-of-type {
