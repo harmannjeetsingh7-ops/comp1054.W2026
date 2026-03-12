@@ -1,0 +1,10 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    color: #2b2623;
+    background: #ddd6ca;
+}
