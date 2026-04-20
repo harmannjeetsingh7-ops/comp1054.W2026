@@ -1,5 +1,6 @@
 @charset "UTF-8";
-/* Reset default spacing and box sizing */
+
+/*Reset default spacing and box sizing */
 
 *,
 *::before,
@@ -29,7 +30,8 @@ svg {
   display: block;
   max-width: 100%;
 }
-/*Added reusable colours */
+
+/* Addcolours */
 
 :root {
   --bg-dark: #080609;
@@ -46,7 +48,7 @@ svg {
   --max-width: 76rem;
 }
 
-/* Style the page */
+/*Style the page */
 
 html {
   scroll-behavior: smooth;
@@ -69,7 +71,7 @@ body {
   color: #ffffff;
 }
 
-/* text styles */
+/*Basic text styles */
 
 h1,
 h2,
@@ -104,7 +106,8 @@ h4 {
 p,
 li {
   font-size: 1rem;
-  max-width: 75%;
+  max-width: 70ch;
+  hyphens: auto;
 }
 
 p + p,
@@ -127,6 +130,123 @@ ol {
 li + li {
   margin-top: 0.45rem;
 }
+
+/* Show some selector examples from class */
+
+p a {
+  color: #ffd9e1;
+}
+
+a[href^="https"] {
+  border-bottom: 1px solid rgba(255, 124, 148, 0.35);
+}
+
+blockquote {
+  padding: 1.2rem;
+  border-left: 4px solid #f4c56d;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 0.8rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.12);
+}
+
+/*Style links */
+
+a {
+  color: #ffd9e1;
+  text-decoration-thickness: 0.12em;
+  text-underline-offset: 0.18em;
+  transition:
+    color 0.25s ease,
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+a:hover,
+a:focus-visible {
+  color: #ffffff;
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent-light);
+  outline-offset: 0.15rem;
+}
+
+/*Skip link for accessibility */
+
+.skip-link {
+  position: absolute;
+  top: 0.75rem;
+  left: 1rem;
+  z-index: 1000;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  background: #fff4f7;
+  color: #450514;
+  transform: translateY(-140%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+/* STEP 8: Shared container */
+
+.container {
+  width: min(94%, 1200px);
+  margin: 0 auto;
+}
+/* Style the main panels */
+
+header .container,
+main .container > article > .container,
+aside .container,
+.page-footer .container {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0)),
+    var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+/*Header styling */
+
+header {
+  padding: 4.25rem 0 1.2rem;
+}
+
+header .container {
+  position: relative;
+  padding: 2.5rem 3rem;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top left, rgba(255, 92, 122, 0.18), transparent 25%),
+    radial-gradient(circle at 80% 25%, rgba(193, 18, 58, 0.2), transparent 20%),
+    linear-gradient(135deg, rgba(45, 11, 21, 0.96), rgba(17, 8, 13, 0.98));
+}
+
+header .container::before {
+  content: "";
+  position: absolute;
+  right: -8%;
+  bottom: -2.75rem;
+  width: 14rem;
+  height: 14rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 92, 122, 0.16), transparent 68%);
+}
+
+header h2 {
+  max-width: 18ch;
+  margin-top: 0.9rem;
+  color: #f9dde4;
+}
+
+header p {
+  margin-top: 1rem;
+  color: var(--muted);
+}
+
 /* Style the GitHub button */
 
 .link-github {
@@ -155,7 +275,7 @@ li + li {
   transform: translateY(-2px);
 }
 
-/* Navigation */
+/*Navigation */
 
 nav {
   padding-bottom: 1.6rem;
@@ -193,7 +313,7 @@ nav a:focus-visible {
   border-color: rgba(255, 124, 148, 0.42);
 }
 
-/* Main layout */
+/*Main layout */
 
 main .container > article > .container,
 aside .container,
@@ -205,13 +325,8 @@ header .container {
 p,
 li {
   font-size: 1.05rem;
-  max-width: 75%;
+  max-width: 75ch;
 }
-
-main article > .container {
-  margin-top: 2rem;
-}
-  
 
 /*Section content */
 
@@ -245,7 +360,7 @@ main article > .container {
   margin-bottom: 0.5rem;
 }
 
-/* Style the action links */
+/*Style the action links */
 
 .link-guidelines,
 .link-downloadcss,
@@ -279,8 +394,10 @@ main article > .container {
 .link-allstyles:focus-visible,
 .profile .container > a:focus-visible {
   background: linear-gradient(180deg, rgba(255, 92, 122, 0.32), rgba(114, 7, 31, 0.42));
+  transform: translateY(-1px);
 }
-/* sourcing file links  */
+
+/*Keep the source file links in one row */
 
 #files {
   margin-top: 1.5rem;
@@ -298,7 +415,7 @@ main article > .container {
   text-align: center;
 }
 
-/* styling the blockquote */
+/* Style the blockquote */
 
 blockquote {
   margin-top: 1rem;
@@ -320,7 +437,8 @@ aside {
 aside .container {
   padding: 1.25rem;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.03)rgba(255, 255, 255, 0)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0)),
+    var(--panel-soft);
 }
 
 .profile ul,
@@ -363,14 +481,14 @@ aside .container {
   font-size: 0.95rem;
 }
 
-/*Footer */
+/* Footer */
 
 .page-footer {
-   padding-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .page-footer .container {
- padding: 1.35rem;
+  padding: 1.35rem;
 }
 
 .page-footer ul {
@@ -401,36 +519,49 @@ aside .container {
 .page-footer ul a:focus-visible {
   background: rgba(193, 18, 58, 0.24);
 }
+
+
 /* Tablet layout */
 
 @media (min-width: 48rem) {
   header {
     padding-top: 5rem;
   }
+
   main {
     padding-bottom: 2rem;
   }
+
   #contribute .container:last-child ol {
     columns: 2;
     column-gap: 2rem;
   }
+
   #contribute .container:last-child li {
     break-inside: avoid;
   }
 }
 
-/*Desktop layout */
+
+
+/* Desktop layout */
 
 @media (min-width: 72rem) {
   body {
     background:
-    radial-gradient(circle at 10% 8%, rgba(125, 0, 30, 0.22), transparent 26%),
-    radial-gradient(circle at 88% 12%, rgba(95, 0, 22, 0.16), transparent 20%),
-    linear-gradient(180deg, #070508 0%, #0d070b 42%, #050507 100%);
+      radial-gradient(circle at 10% 8%, rgba(125, 0, 30, 0.22), transparent 26%),
+      radial-gradient(circle at 88% 12%, rgba(95, 0, 22, 0.16), transparent 20%),
+      linear-gradient(180deg, #070508 0%, #0d070b 42%, #050507 100%);
   }
 
   .container {
     width: min(94%, 1200px);
+  }
+
+  main .container {
+    grid-template-columns: 2.2fr 1fr;
+    gap: 2rem;
+    align-items: start;
   }
 
   #about,
@@ -448,5 +579,19 @@ aside .container {
   #styles .container {
     position: sticky;
     top: 1.5rem;
+  }
+}
+/*Reduce motion for accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
   }
 }
