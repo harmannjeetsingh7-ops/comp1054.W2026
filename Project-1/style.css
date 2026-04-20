@@ -280,3 +280,85 @@ main article > .container {
 .profile .container > a:focus-visible {
   background: linear-gradient(180deg, rgba(255, 92, 122, 0.32), rgba(114, 7, 31, 0.42));
 }
+/* sourcing file links  */
+
+#files {
+  margin-top: 1.5rem;
+}
+
+#files .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+#files .container a {
+  flex: 1 1 12rem;
+  text-align: center;
+}
+
+/* styling the blockquote */
+
+blockquote {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-left: 4px solid var(--accent);
+  background: rgba(193, 18, 58, 0.08);
+}
+
+blockquote p {
+  font-style: italic;
+}
+
+/*Sidebar styling */
+
+aside {
+  padding-bottom: 1.5rem;
+}
+
+aside .container {
+  padding: 1.25rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03)rgba(255, 255, 255, 0)),
+}
+
+.profile ul,
+.features {
+  list-style: none;
+  margin: 1rem 0 0;
+}
+
+.profile li,
+.features li {
+  margin: 0;
+  padding: 0.8rem 0;
+  border-top: 1px solid rgba(255, 124, 148, 0.12);
+}
+
+.profile li:first-child,
+.features li:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.profile li span:first-child {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.profile a,
+.features a {
+  color: #fff0f4;
+  font-weight: 700;
+}
+
+.features li > span {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.features li span span:last-child {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
