@@ -362,3 +362,43 @@ aside .container {
   color: var(--muted);
   font-size: 0.95rem;
 }
+
+/*Footer */
+
+.page-footer {
+   padding-bottom: 2.5rem;
+}
+
+.page-footer .container {
+ padding: 1.35rem;
+}
+
+.page-footer ul {
+  list-style: none;
+  margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.page-footer li {
+  margin: 0;
+}
+
+.page-footer ul a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(43, 15, 24, 0.85);
+  text-decoration: none;
+}
+
+.page-footer ul a:hover,
+.page-footer ul a:focus-visible {
+  background: rgba(193, 18, 58, 0.24);
+}
+
