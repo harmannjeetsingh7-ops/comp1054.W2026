@@ -29,3 +29,101 @@ svg {
   display: block;
   max-width: 100%;
 }
+/*Added reusable colours */
+
+:root {
+  --bg-dark: #080609;
+  --bg-mid: #10070d;
+  --panel: rgba(22, 10, 16, 0.88);
+  --panel-soft: rgba(35, 17, 25, 0.72);
+  --text: #f1e7eb;
+  --muted: #ccb7bf;
+  --heading: #fff4f7;
+  --accent: #c1123a;
+  --accent-light: #ff5c7a;
+  --border: rgba(255, 124, 148, 0.22);
+  --shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+  --max-width: 76rem;
+}
+
+/* Style the page */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.65;
+  letter-spacing: 0.01em;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top, rgba(125, 0, 30, 0.22), transparent 34%),
+    radial-gradient(circle at 85% 15%, rgba(115, 15, 40, 0.14), transparent 24%),
+    linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-mid) 35%, #050507 100%);
+}
+
+::selection {
+  background: rgba(255, 92, 122, 0.32);
+  color: #ffffff;
+}
+
+/* text styles */
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--heading);
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+}
+
+h1 {
+  font-size: clamp(2.8rem, 6vw, 5.2rem);
+  text-transform: uppercase;
+  text-shadow: 0 0 0.35rem rgba(255, 92, 122, 0.35);
+}
+
+h2 {
+  font-size: clamp(1.7rem, 3vw, 2.5rem);
+  margin-bottom: 0.9rem;
+}
+
+h3 {
+  font-size: clamp(1.2rem, 2vw, 1.7rem);
+  margin-bottom: 0.7rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.7rem;
+}
+
+p,
+li {
+  font-size: 1rem;
+  max-width: 75%;
+}
+
+p + p,
+p + ul,
+p + ol,
+blockquote + p {
+  margin-top: 0.9rem;
+}
+
+strong {
+  color: #ffd7df;
+}
+
+ul,
+ol {
+  margin-top: 1rem;
+  margin-left: 1.25rem;
+}
+
+li + li {
+  margin-top: 0.45rem;
+}
