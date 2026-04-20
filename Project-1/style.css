@@ -1,5 +1,5 @@
 @charset "UTF-8";
- Reset default spacing and box sizing */
+/* Reset default spacing and box sizing */
 
 *,
 *::before,
@@ -126,4 +126,157 @@ ol {
 
 li + li {
   margin-top: 0.45rem;
+}
+/* Style the GitHub button */
+
+.link-github {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-top: 1.4rem;
+  padding: 0.9rem 1.15rem;
+  border: 1px solid rgba(255, 124, 148, 0.42);
+  border-radius: 999px;
+  background: rgba(193, 18, 58, 0.14);
+  color: #fff1f4;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.link-github svg {
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
+}
+
+.link-github:hover,
+.link-github:focus-visible {
+  background: rgba(193, 18, 58, 0.28);
+  transform: translateY(-2px);
+}
+
+/* Navigation */
+
+nav {
+  padding-bottom: 1.6rem;
+}
+
+nav ul {
+  list-style: none;
+  width: min(100% - 2rem, var(--max-width));
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.7rem;
+}
+
+nav li {
+  margin: 0;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0.78rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(43, 15, 24, 0.82);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  background: rgba(193, 18, 58, 0.24);
+  border-color: rgba(255, 124, 148, 0.42);
+}
+
+/* Main layout */
+
+main .container > article > .container,
+aside .container,
+.page-footer .container,
+header .container {
+  padding: 2rem;
+}
+
+p,
+li {
+  font-size: 1.05rem;
+  max-width: 75%;
+}
+
+main article > .container {
+  margin-top: 2rem;
+}
+  
+
+/*Section content */
+
+#about .container,
+#guidelines .container,
+#contribute .container {
+  display: block;
+  padding: 1.5rem;
+}
+
+#about p,
+#guidelines p,
+#contribute p {
+  max-width: 65ch;
+  margin-bottom: 1rem;
+}
+
+#about ul,
+#guidelines ul,
+#contribute ul,
+#about ol,
+#guidelines ol,
+#contribute ol {
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+}
+
+#about li,
+#guidelines li,
+#contribute li {
+  margin-bottom: 0.5rem;
+}
+
+/* Style the action links */
+
+.link-guidelines,
+.link-downloadcss,
+.link-downloadhtml,
+.link-codepen,
+.link-allstyles,
+.profile .container > a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  padding: 0.85rem 1.1rem;
+  border-radius: 0.8rem;
+  border: 1px solid rgba(255, 124, 148, 0.42);
+  background: linear-gradient(180deg, rgba(193, 18, 58, 0.2), rgba(93, 8, 27, 0.24));
+  color: #fff3f6;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.link-guidelines:hover,
+.link-downloadcss:hover,
+.link-downloadhtml:hover,
+.link-codepen:hover,
+.link-allstyles:hover,
+.profile .container > a:hover,
+.link-guidelines:focus-visible,
+.link-downloadcss:focus-visible,
+.link-downloadhtml:focus-visible,
+.link-codepen:focus-visible,
+.link-allstyles:focus-visible,
+.profile .container > a:focus-visible {
+  background: linear-gradient(180deg, rgba(255, 92, 122, 0.32), rgba(114, 7, 31, 0.42));
 }
